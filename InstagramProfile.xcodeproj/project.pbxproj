@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		231ABEE924017EE8007F23E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231ABEE824017EE8007F23E8 /* Assets.xcassets */; };
 		231ABEEC24017EE8007F23E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231ABEEB24017EE8007F23E8 /* Preview Assets.xcassets */; };
 		231ABEEF24017EE8007F23E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231ABEED24017EE8007F23E8 /* LaunchScreen.storyboard */; };
+		231ABEFA24017F43007F23E8 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ABEF924017F43007F23E8 /* ProfileHeader.swift */; };
+		231ABEFD2401827D007F23E8 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 231ABEFC2401827D007F23E8 /* ASCollectionView */; };
+		231ABEFF240182F7007F23E8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ABEFE240182F7007F23E8 /* Post.swift */; };
+		231ABF0124018333007F23E8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ABF0024018333007F23E8 /* PostCell.swift */; };
+		231ABF032401847D007F23E8 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ABF022401847D007F23E8 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		231ABEEB24017EE8007F23E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		231ABEEE24017EE8007F23E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		231ABEF024017EE8007F23E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		231ABEF924017F43007F23E8 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		231ABEFE240182F7007F23E8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		231ABF0024018333007F23E8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		231ABF022401847D007F23E8 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231ABEFD2401827D007F23E8 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +66,11 @@
 		231ABEE124017EE6007F23E8 /* InstagramProfile */ = {
 			isa = PBXGroup;
 			children = (
+				231ABEF824017F08007F23E8 /* Model */,
+				231ABEF724017F06007F23E8 /* View */,
+				231ABEF624017F01007F23E8 /* ViewModel */,
 				231ABEE224017EE6007F23E8 /* AppDelegate.swift */,
 				231ABEE424017EE6007F23E8 /* SceneDelegate.swift */,
-				231ABEE624017EE6007F23E8 /* ContentView.swift */,
 				231ABEE824017EE8007F23E8 /* Assets.xcassets */,
 				231ABEED24017EE8007F23E8 /* LaunchScreen.storyboard */,
 				231ABEF024017EE8007F23E8 /* Info.plist */,
@@ -73,6 +85,32 @@
 				231ABEEB24017EE8007F23E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		231ABEF624017F01007F23E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				231ABF022401847D007F23E8 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		231ABEF724017F06007F23E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				231ABEE624017EE6007F23E8 /* ContentView.swift */,
+				231ABEF924017F43007F23E8 /* ProfileHeader.swift */,
+				231ABF0024018333007F23E8 /* PostCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		231ABEF824017F08007F23E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				231ABEFE240182F7007F23E8 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +129,9 @@
 			dependencies = (
 			);
 			name = InstagramProfile;
+			packageProductDependencies = (
+				231ABEFC2401827D007F23E8 /* ASCollectionView */,
+			);
 			productName = InstagramProfile;
 			productReference = 231ABEDF24017EE6007F23E8 /* InstagramProfile.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 231ABED624017EE6007F23E8;
+			packageReferences = (
+				231ABEFB2401827D007F23E8 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 231ABEE024017EE6007F23E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231ABEFA24017F43007F23E8 /* ProfileHeader.swift in Sources */,
+				231ABF032401847D007F23E8 /* PostViewModel.swift in Sources */,
 				231ABEE324017EE6007F23E8 /* AppDelegate.swift in Sources */,
 				231ABEE524017EE6007F23E8 /* SceneDelegate.swift in Sources */,
 				231ABEE724017EE6007F23E8 /* ContentView.swift in Sources */,
+				231ABEFF240182F7007F23E8 /* Post.swift in Sources */,
+				231ABF0124018333007F23E8 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		231ABEFB2401827D007F23E8 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		231ABEFC2401827D007F23E8 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 231ABEFB2401827D007F23E8 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 231ABED724017EE6007F23E8 /* Project object */;
 }
